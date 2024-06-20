@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 
  <router-view></router-view>
 
@@ -15,6 +15,36 @@ export default {
   }
 }
 </script>
+<style scoped>
+
+</style> -->
+<template>
+<PropertiesFile name="albert"/>
+<PropertiesFile name="bruce"/>
+<PropertiesFile name="clark"/>
+<PropertiesFile :name="name" :age="age" :sex="sex" :hobby="hobby" />
+
+``
+</template>
+
+<script>
+import PropertiesFile from './components/PropertiesFile.vue'
+export default {
+  
+  components:{
+  PropertiesFile,
+  },
+  data(){
+    return{
+        name:"bean",
+        age:18,
+        sex:"male",
+    }
+   }
+  
+}
+</script>
+
 <style scoped>
 
 </style>
